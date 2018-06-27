@@ -7,31 +7,22 @@ Created on Tue Jun 19 18:24:20 2018
 """
 import pandas as pd
 from collections import defaultdict
-from gensim import corpora,matutils,models  
 import numpy as np
-import re
-from nltk.stem.porter import PorterStemmer
 from sklearn.cluster import KMeans,DBSCAN, AgglomerativeClustering,Birch
 from sklearn import mixture
-from operator import itemgetter
+#from operator import itemgetter
 import jellyfish
 from sklearn.preprocessing import scale,normalize,LabelEncoder
 from sklearn import metrics
 import itertools
 from sklearn.decomposition import PCA
+from UtteranceVectorizer import *
+import config 
 
-FILE_FOLDER = 'collected_data'
-FILENAME = "Real_estate_utterances.csv"
-OUTPUT_FILENAME = "%s_clustered.csv" % FILENAME.split('.')[0]
-DOC2VEC_DIMENSION = 1000
-#KEYWORD2VEC_DIMENSION = 200
-N_CLUSTERS = 30
-IS_SCENARIO_DEPENDENT = True
-SCENARIO_INDEX = 6
 
 
 def generate_utterance_dict():
-    df=  pd.read_csv('./'+FILE_FOLDER+'/'+ FILENAME)
+    df=  pd.read_csv('./'+config.FILE_FOLDER+'/'+ config.FILENAME)
     utterance_dict = defaultdict(list)
     for index, row in df.iterrows():
         scenario = row['scenario']
@@ -141,12 +132,12 @@ def calc_cluster_metrics(utterances, cluster_series, tfidf_vector):
     return intracluster_distances, typical_utterances
   
         
-def save_result(utterances,scenarios,cluster,typical_utterances,bad_clusters):
+def save_result(utterances,scenarios,cluster,typical_utterances,bad_clusters,intracluster_distances):
    
     print ('saving results') 
 
     result = pd.DataFrame({'SPEECH':utterances})
-    result['CLUSTER_ID']  =  cluster_series
+    result['CLUSTER_ID']  =  cluster
     
     result['SCENARIO'] = scenarios
 
@@ -163,7 +154,7 @@ def save_result(utterances,scenarios,cluster,typical_utterances,bad_clusters):
        result.loc[index, 'INTRACLUSTER_DISTANCE'] = intracluster_distances.get(cluster_id)        
        #result.loc[index, 'TSS'] = TSSs.get(cluster_id) 
     result = result.sort_values(['CLUSTER_ID'], ascending=[True])    
-    result.to_csv('./'+FILE_FOLDER+'/'+OUTPUT_FILENAME,sep=',',encoding='utf-8')    
+    result.to_csv('./'+config.FILE_FOLDER+'/'+config.OUTPUT_FILENAME,sep=',',encoding='utf-8')    
     print ('DONE')
 
 
@@ -186,97 +177,7 @@ def determine_bad_clusters(intracluster_distances,threshold_value):
            bad_clusters.extend([key])
     return bad_clusters
 
-class UtteranceVectorizer(object):
-   
-    def __init__(self,utterance_df):
-        self.utterance_df = utterances_df
-        print ("vectorizing utterances")
-        
-    def tokenize(self,sent,delim= ' '):
-        '''Return the tokens of a sentence including punctuation.
-    
-        >>> tokenize('Bob dropped the apple. Where is the apple?')
-        ['Bob', 'dropped', 'the', 'apple', '.', 'Where', 'is', 'the', 'apple', '?']
-        '''   
-        return [x.lower().strip() for x in re.split(delim, sent) if x.strip()]
-     
-    def vectorize_sentences(self):
-        sentences, self.dictionary = self.get_dictionary(self.utterance_df['UTTERANCE'])
-        self.tfidf_model,self.tfidf_vector, self.lsi_model, self.lsi_vector = self.get_lsi_model(sentences, DOC2VEC_DIMENSION)
-        #return dictionary,tfidf_model,tfidf_vector,lsi_model, lsi_vector
-    
-    def ngrams(self,tokens, n,len_extra=0 ): 
-        output = []  
-        for i in range(len_extra,len(tokens)-n+1):
-        #for i in range(len(tokens)-n-len_extra+1):
-            g = '-'.join(tokens[i:i+n])
-            output.extend([g]) 
-        return (output)
 
-    def tokenize_and_stem(self,text, is_tokenize=True):
-        text = "".join(c for c in text if c not in ('!','.',',','?'))  
-        tokens = [word.lower().strip() for word in text.split(" ")]
-        filtered_tokens = []
-        for token in tokens:
-            if re.search('[a-zA-Z0-9]', token):
-                filtered_tokens.append(token)  
-        stems = [PorterStemmer().stem(t) for t in filtered_tokens]
-        if is_tokenize:
-            return stems
-        else:
-            return self.tokenize(text)
-    
-    def get_tokens(self,sentence,is_tokenize=True,use_ngram=True):
-        tokens = self.tokenize_and_stem(sentence,is_tokenize)      
-        if use_ngram: 
-            bigram = self.ngrams(tokens,2)
-            trigram = self.ngrams(tokens,3)      
-            tokens.extend(bigram)
-            tokens.extend(trigram)
-        return tokens
-    
-    def get_lsi_model(self,sentences,dimension):
-        corpus = [self.dictionary.doc2bow(s) for s in sentences]
-        tfidf = models.TfidfModel(corpus,normalize=True)
-        corpus_tfidf = tfidf[corpus]
-        lsi = models.LsiModel(corpus_tfidf, onepass=False, power_iters=2,id2word=self.dictionary, num_topics=dimension)
-        corpus_lsi = lsi[corpus_tfidf]
-        corpus_lsi = np.asarray([matutils.sparse2full(vec, dimension) for vec in corpus_lsi])
-        corpus_tfidf = np.asarray([matutils.sparse2full(vec, len(self.dictionary)) for vec in corpus_tfidf])  
-        #dtm_model = gensim.models.DtmModel('dtm-linux64', corpus, my_timeslices, num_topics=20, id2word=dictionary)
-        return (tfidf, corpus_tfidf, lsi, corpus_lsi)
-    
-    def get_dictionary(self,df,is_tokenize=True,use_ngram=True):
-        sentences = []
-        for index, sentence in enumerate(df):
-            #print (sentence)
-            tokens =self.get_tokens(sentence,is_tokenize,use_ngram) 
-            sentences.append(tokens)
-            
-        dictionary = corpora.Dictionary(sentences)
-        dictionary.filter_extremes(no_below=2, no_above=0.95, keep_n=5000)
-        once_ids = [tokenid for tokenid, docfreq in dictionary.dfs.items() if docfreq == 1]
-        dictionary.filter_tokens(once_ids) # remove stop words and words that appear only once
-        dictionary.compactify()   
-        return (sentences, dictionary)    
-            
-        
-    
-    def get_vector_for_clustering(self,scenario=None):
-    
-        
-        indices = self.utterance_df.index[self.utterance_df['SCENARIO'] == scenario].tolist()    
-        lsi_vector_scenario_based = np.take(self.lsi_vector, indices,axis = 0)
-        tfidf_vector_scenario_based = np.take(self.tfidf_vector, indices,axis = 0)
-        
-        utterances_flattened_scenario_based = self.utterance_df.loc[self.utterance_df['SCENARIO'] == scenario]['UTTERANCE']    
-        utterances_flattened_scenario_based = utterances_flattened_scenario_based.reset_index(drop=True)
-        
-        current_scenario = self.utterance_df.loc[self.utterance_df['SCENARIO'] == scenario]['SCENARIO']
-        current_scenario = current_scenario.reset_index(drop=True)
-        
-        return lsi_vector_scenario_based,tfidf_vector_scenario_based,utterances_flattened_scenario_based,current_scenario
-        
  
 
 
@@ -285,12 +186,10 @@ def main():
     utterances_df = create_utterance_df(utterance_dict)
     
     vectorizer = UtteranceVectorizer(utterances_df)
-    vectorizer.vectorize_sentences() 
-    #user_dictionary,user_tfidf_model,user_tfidf_vector,user_lsi_model, user_lsi_vector = vectorizer.vectorize_sentences() 
+    vectorizer.vectorize_sentences(dimension=config.DOC2VEC_DIMENSION) 
     
-    if IS_SCENARIO_DEPENDENT:        
-      #  user_lsi_vector,user_tfidf_vector,utterances,current_scenario = get_vector_for_clustering(is_scenario_dependent = False)
-        user_lsi_vector,user_tfidf_vector,utterances,current_scenario = vectorizer.get_vector_for_clustering(scenario =list(utterance_dict.keys())[SCENARIO_INDEX])
+    if config.IS_SCENARIO_DEPENDENT:           
+        user_lsi_vector,user_tfidf_vector,utterances,current_scenario = vectorizer.get_vector_for_clustering(scenario =list(utterance_dict.keys())[config.SCENARIO_INDEX])
     else: 
         user_lsi_vector = vectorizer.lsi_vector
         user_tfidf_vector = vectorizer.tfidf_vector
@@ -298,7 +197,7 @@ def main():
         current_scenario = utterances_df['SCENARIO']
     
     
-    model, cluster_series = clustering(user_lsi_vector,   N_CLUSTERS)
+    model, cluster_series = clustering(user_lsi_vector,   config.N_CLUSTERS)
     intracluster_distances,typical_utterances = calc_cluster_metrics(utterances,cluster_series,user_tfidf_vector)
     
     #silhoutte_scores = metrics.silhouette_score(user_lsi_vector, cluster_series,
@@ -307,7 +206,7 @@ def main():
     # calcuate the silhoutte score
     #silhouette_scores = metrics.silhouette_samples(final_vecs, cluster_array, metric='cosine')
     bad_clusters = determine_bad_clusters(intracluster_distances,threshold_value = 0.1)   
-    save_result(utterances,current_scenario,cluster_series,typical_utterances,bad_clusters)
+    save_result(utterances,current_scenario,cluster_series,typical_utterances,bad_clusters,intracluster_distances)
 
 
 if __name__ == '__main__':

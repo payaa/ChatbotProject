@@ -14,20 +14,13 @@ except ImportError:
     # for Python3
     from tkinter import *   ## notice lowercase 't' in tkinter here
     import tkinter as tk
-#from Tkinter import *
-#import tkFont
+
 
 import numpy as np
-import pickle
-from settings import *
+import config 
 
 
-FILE_FOLDER = 'collected_data'
-FILENAME = "Real_estate_utterances_clustered.csv"
-
-#dataset_type = 'chatbot_data'
-
-cluster_definition = pd.read_csv('./'+FILE_FOLDER+'/'+FILENAME,sep=',',encoding='utf-8')
+cluster_definition = pd.read_csv('./'+config.FILE_FOLDER+'/'+config.OUTPUT_FILENAME,sep=',',encoding='utf-8')
 cluster_definition['CLUSTER_ID'] = cluster_definition['CLUSTER_ID'].astype('str')
 #intracluster_distances = pickle.load( open( "./results/intercluster_distances.pkl", "rb" ) )
 #TSSs = pickle.load( open( "./results/tss.pkl", "rb" ) )
@@ -188,7 +181,7 @@ metric= StringVar()
 metric.set("silhoutte")
 Radiobutton(layer0, text="Silhoutte", variable=metric, value="silhoutte",command=load_metric).pack(side=LEFT,anchor=W)
 Radiobutton(layer0, text="Intracluster_distance", variable=metric, value="intracluster",command=load_metric).pack(side=LEFT,anchor=W)
-Radiobutton(layer0, text="TSS", variable=metric, value="tss",command=load_metric).pack(side=LEFT,anchor=W)
+#Radiobutton(layer0, text="TSS", variable=metric, value="tss",command=load_metric).pack(side=LEFT,anchor=W)
 percentileLabel = Label(layer0, text="   Percentile")
 percentileLabel.pack(side=LEFT)
 percentileEntry = Entry(layer0, bd=1, width=10)

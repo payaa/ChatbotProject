@@ -56,7 +56,7 @@ real_estate_user_df=  pd.read_csv('./'+dataset_type+'/'+ FILENAME)
 utterance_dict = defaultdict(list)
 for index, row in real_estate_user_df.iterrows():
     scenario = row['scenario'].lower().strip()
-    utterance = re.sub('[\W_]+', ' ', row['utterance'].lower().strip().decode("utf-8"), flags=re.UNICODE) 
+    utterance = re.sub('[\W_]+', ' ', row['utterance'].lower().strip(), flags=re.UNICODE) 
  
     utterance_dict[scenario].append(utterance)
 

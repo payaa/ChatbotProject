@@ -16,6 +16,7 @@ Created on Tue Jun 19 18:24:20 2018
 import pandas as pd
 from collections import defaultdict
 import numpy as np
+import string
 
 dataset_type = 'collected_data'
 FILENAME_JOB2 = "Job2_postprocessed.csv"
@@ -33,6 +34,16 @@ def assign_template_utterance(row,df_database,col_name):
         return "NONE"     
     else: 
         return template_utterance.to_string(index=False) 
+    
+def replace_scenario_text(row):
+    new_str = row['SCENARIO'].replace('you', 'customer')
+    new_str = new_str.replace('want', 'wants')
+   
+    return new_str
+    
+
+
+
  
 col_name = 'ANNOTATION_USER'
 df_job3_preprocessed[col_name] = df_job3_preprocessed.apply (lambda row: assign_template_utterance (row,df_job3_db,col_name),axis=1)   
@@ -43,8 +54,11 @@ df_job3_preprocessed[col_name] = df_job3_preprocessed.apply (lambda row: assign_
 col_name = 'AGENT_TEMPLATE_UTTERANCE'
 df_job3_preprocessed[col_name] = df_job3_preprocessed.apply (lambda row: assign_template_utterance (row,df_job3_db,col_name),axis=1)   
 
+df_job3_preprocessed['SCENARIO'] = df_job3_preprocessed.apply (lambda row: replace_scenario_text (row),axis=1)   
+
 df_job3_preprocessed = df_job3_preprocessed.loc[df_job3_preprocessed['AGENT_TEMPLATE_UTTERANCE'] != 'NONE']
 
+df_job3_preprocessed = df_job3_preprocessed.sample(frac=1).sample(frac=1)
 df_job3_preprocessed.to_csv('./'+dataset_type+'/Job3_preprocessed.csv',sep=',',encoding='utf-8',index=False)    
 
 
