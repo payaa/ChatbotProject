@@ -1,0 +1,104 @@
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jun 19 18:24:20 2018
+
+@author: phoebeliu
+"""
+import pandas as pd
+from collections import defaultdict
+import re
+import itertools
+
+dataset_type = 'collected_data'
+FILENAME = "Job2_aggregated.csv"
+
+
+def flag_bad_content (row):
+   #if row['UTTERANCE'] in scenarios:
+   #    print ("utterance %s" % row['UTTERANCE'])
+   if len(row['UTTERANCE'].split()) <= 1 :
+      return 'UNACCEPATABLE_CONTENT_ONE_WORD'
+   elif row['UTTERANCE'] == row['SCENARIO']: 
+      return 'UNACCEPATBLE_CONTENT_SAME_AS_SCENARIO'
+   elif row['UTTERANCE'] in scenarios :
+      return 'UNACCEPTABLE_CONTENT_OTHER_SCENARIO'
+   elif any(row['UTTERANCE'] in s for s in scenarios):
+       return 'UNACCEPTABLE_CONTENT_SUBSET_OF_OTHER_SCENARIO'
+   elif row['UTTERANCE'] in "are you prepared to spend approximately the next 30 minutes":
+       return 'UNACCEPTABLE_LOW_QUALITY'
+   else:
+      return 'ACCEPTABLE_CONTENT'
+  
+
+def is_english(row):
+    if row['does_the_utterance_make_sense:confidence'] < 1: 
+        return 'FALSE'
+    else:
+        return 'TRUE'
+    
+def is_meaning_close_to_intent(row):
+
+    if float(row['how_close_does_the_utterance_convey_the_same_meaning_as_the_scenario']) < 4: 
+        return 'FALSE'
+    else:
+        return 'TRUE' 
+    
+def is_natural_sounding(row):
+    if float(row['how_natural_does_the_utterance_sound_in_terms_of_what_a_native_english_speaker_would_say']) < 4: 
+        return 'FALSE'
+    else:
+        return 'TRUE'    
+
+
+real_estate_user_df=  pd.read_csv('./'+dataset_type+'/'+ FILENAME)
+
+utterance_dict = defaultdict(list)
+for index, row in real_estate_user_df.iterrows():
+    scenario = row['scenario'].lower().strip()
+    utterance = re.sub('[\W_]+', ' ', row['utterance'].lower().strip().decode("utf-8"), flags=re.UNICODE) 
+ 
+    utterance_dict[scenario].append(utterance)
+
+    
+    
+scenarios = utterance_dict.keys()
+utterances = utterance_dict.values()    
+utterances_df = pd.DataFrame({'UTTERANCE':[y for x in utterances for y in x]})
+scenarios_flattened = list(itertools.chain.from_iterable(itertools.repeat(scenario, len(utterance_dict[scenario])) for scenario in scenarios))
+utterances_df['SCENARIO'] = scenarios_flattened
+ 
+utterances_df = pd.concat([utterances_df,real_estate_user_df[['does_the_utterance_make_sense:confidence', 'how_close_does_the_utterance_convey_the_same_meaning_as_the_scenario', 'how_natural_does_the_utterance_sound_in_terms_of_what_a_native_english_speaker_would_say']]],axis=1)
+
+    
+#utterances_df['LANGUAGE'] = utterances_df.apply(lambda row: detect_language(row),axis=1)
+utterances_df['FLAB_BAD_CONTENT'] = utterances_df.apply (lambda row: flag_bad_content (row),axis=1)
+utterances_df = utterances_df.loc[utterances_df['FLAB_BAD_CONTENT'] == 'ACCEPTABLE_CONTENT']
+
+utterances_df['IS_ENGLISH'] = utterances_df.apply (lambda row: is_english (row),axis=1)
+utterances_df = utterances_df.loc[utterances_df['IS_ENGLISH'] == 'TRUE']
+
+
+utterances_df['IS_MEANING_CLOSE_TO_INTENT'] = utterances_df.apply (lambda row: is_meaning_close_to_intent (row),axis=1)
+utterances_df = utterances_df.loc[utterances_df['IS_MEANING_CLOSE_TO_INTENT'] == 'TRUE']
+ 
+#utterances_df['IS_NATURAL_SOUNDING'] = utterances_df.apply (lambda row: is_natural_sounding (row),axis=1)
+#utterances_df = utterances_df.loc[utterances_df['IS_NATURAL_SOUNDING'] == 'TRUE']
+
+utterances_df.to_csv('./'+dataset_type+'/Job2_postprocessed.csv',sep=',',encoding='utf-8',index=False)    
+
+
+# =============================================================================
+# utterance_dict_filtered = defaultdict(list)
+# for index, row in utterances_df.iterrows():
+#     scenario = row['SCENARIO'].lower().strip()
+#     utterance = row['UTTERANCE'].lower().strip() 
+#     utterance_dict_filtered[scenario].append(utterance)
+#    
+# 
+# # how many unique utterances per scenario
+# for scenario in utterance_dict_filtered.keys() :
+#     print ('Scenario: %s' %(scenario))
+#     print ('# of unique utterances %d' % len(set(utterance_dict_filtered[scenario])) )
+#            
+# =============================================================================

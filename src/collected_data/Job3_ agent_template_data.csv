@@ -1,0 +1,30 @@
+﻿SCENARIO,ANNOTATION_USER,ANNOTATION_SYSTEM,AGENT_TEMPLATE_UTTERANCE
+you want to know how much your down payment should be,FAQ(info=amount_of_down_payment),ANSWER(info=minimal 3.5% down payment),minimal 3.5% down payment
+you want to know what happens during closing process,FAQ(info=closing_process),"ANSWER(info = {sign legal documents,home inspection,pay transfer taxes})","sign legal documents,home inspection,pay transfer taxes"
+you want to know which neighborhoods the real estate agent covers,FAQ(info=coverage_area),"ANSWER(info={Neighborhood A, Neighborhood B, Neighborhood C})","covers Neighborhood A, Neighborhood B, Neighborhood C"
+you want to know what the first step to buying a home is,FAQ(info=first_step_to_purchase),ANSWER(info=getting pre-approved for a mortgage),first step is to get pre-approved for a mortgage
+you want to know how your credit score affects home buying,FAQ(info=how_credit_score_affected),ANSWER(info=Higher credit score means lower interest rate),Higher credit score means lower interest rate
+you want to know how much credit score you need to buy a home,FAQ(info=how_many_credit_score),ANSWER(info=minimum 500  score to get a loan),need a minimum 500  score to get a loan
+you want to know how many homes you should view before making a decision,FAQ(info=num_home_views),ANSWER(info=on average 10 homes),on average home buyers view 10 homes
+you want to know how long it usually takes to buy a home,FAQ(info=time_duration_purchase),ANSWER(info=6 months to two-and-a-half years),on average 6 months to two-and-a-half years
+you want to know what service the real estate agent provides,FAQ(info=type_of_services_provided),"ANSWER(info={help you find a home, negotiate an offer, help with picking a home inspector, communicate with seller's agent, monitor your loan commitment})","services include help you find a home, negotiate an offer, help with picking a home inspector, communicate with seller's agent, monitor your loan commitment"
+you want to know how much a real estate agent charge,FAQ(info=typical_charge_amount),ANSWER(info=2% to 3% of the sales price),2% to 3% of the sales price
+you are looking for a condo,"INFORM(intent=search_home,property_type=condo)",ack(). Request(category),OK. Ask buyer whether he wants luxury or affordable home 
+you are looking for a single family home,"INFORM(intent=search_home,property_type=single_family_house)",ack(). Request(category),OK. Ask buyer whether he wants luxury or affordable home 
+you are looking to buy an affordable home,INFORM(category=affordable),ack(). Request(budget),OK. Ask buyer about his budget
+you are looking for an luxury home,INFORM(category=luxury),ack(). Request(budget),OK. Ask buyer about his budget
+your budget is around 500k,INFORM(budget=500K),ack(). Request(move_in_date),OK. Ask when buyer would like to move in
+you want to live in neighborhood A,INFORM(neighborhood=A),ack(). Request(move_in_date),OK. Ask when buyer would like to move in
+you are looking to move immediately,INFORM(move_in_date=immediately),OFFER(property_name=Edgewater),Offer a property named Edgewater
+you are looking to move in the next two year,INFORM(move_in_date=within_2_years),"SELECT(property_name={House on Maple Street, House on Cedar Street})",Offer a property named House on Maple Street and a property named House on Cedar Street
+you want to know the amenties that are in the building,REQUEST(amenties),"OFFER_SLOT_VALUE(amenties = {gym,swimming pool})",Amenties include gym and swimming pool
+you want to know how big the apartment is,REQUEST(apartment_size),OFFER_SLOT_VALUE(apartment_size = 650 square feet),Apartment size is 650 square feet
+"you want to know about other fees, beside downpayment",REQUEST(fee),OFFER_SLOT_VALUE(fee=trash_fee),Fee includes trash fee
+you want to know the duration of the lease term,REQUEST(lease_duration),OFFER_SLOT_VALUE(lease_duration=2 years),Lease duration is 2 years
+you want to know about nearby grocery store,REQUEST(nearby_grocery),OFFER_SLOT_VALUE(nearby_grocery=Safeway),Nearby grocery is Safeway
+you want to know how safe the neighborhood is,REQUEST(neighborhood_safety),OFFER_SLOT_VALUE(neighborhood_safety=low crime),Neighborhood safety is low crime
+you want to know how many bedrooms the apartment has,REQUEST(num_of_bedrooms),OFFER_SLOT_VALUE(num_of_bedrooms=1),number of bedrooms equals one
+you want to know the parking situation of the apartment,REQUEST(parking),OFFER_SLOT_VALUE(parking=street parking),Parking is street parking
+your want to know if an apartment allows pet,REQUEST(pet_policy),OFFER_SLOT_VALUE(pet_policy=allowed),Pet is allowed
+you want to know the subletting policy,REQUEST(subletting_policy),OFFER_SLOT_VALUE(subletting_policy=ok for short term),Subletting policy is ok for short term subletting
+you want to know how much deposit will be,REQUEST(info=deposit),OFFER_SLOT_VALUE(deposit=1 month rent),Deposit is 1 month rent
