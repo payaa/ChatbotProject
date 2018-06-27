@@ -1,0 +1,121 @@
+,SPEECH,CLUSTER_ID,SCENARIO,TYPICAL_VECTOR,INTRACLUSTER_DISTANCE,IS_BAD_CLUSTER
+2,i am looking to move into a condo,1,You are looking for a condo,*,0.824000328779,
+60,i d like to move into a condo,1,You are looking for a condo,,0.824000328779,
+108,i need to buy a condo ,2,You are looking for a condo,,0.830795526505,
+9,i want to buy a condo ,2,You are looking for a condo,*,0.830795526505,
+62,i m looking for condos,3,You are looking for a condo,,0.827538579702,
+36,i m looking for a condo ,3,You are looking for a condo,*,0.827538579702,
+72,i m looking for a condo,3,You are looking for a condo,,0.827538579702,
+93,i m looking for a condo that fits my budget,3,You are looking for a condo,,0.827538579702,
+18,is there a good selection of condos in this area ,4,You are looking for a condo,*,,
+53,where are the available condos located ,5,You are looking for a condo,,0.711147725582,
+52,what are the prices of the available condos ,5,You are looking for a condo,*,0.711147725582,
+51,do you have any condos available ,6,You are looking for a condo,,0.778530664742,
+74,do you know of any condo available ,6,You are looking for a condo,,0.778530664742,
+27,do you have any condo available ,6,You are looking for a condo,*,0.778530664742,
+17,do you have any condos ,6,You are looking for a condo,,0.778530664742,
+43,i really want to move to a condo,7,You are looking for a condo,,0.744888991117,
+24,i want to move to a condo can you find me one ,7,You are looking for a condo,*,0.744888991117,
+15,can you help me find a condo ,8,You are looking for a condo,,0.841907845603,
+109,can you help me find a condo ,8,You are looking for a condo,*,0.841907845603,
+107,can you help me ,8,You are looking for a condo,,0.841907845603,
+117,cominosago,9,You are looking for a condo,,0.0511446027085,BAD
+57,where can i find a condo ,9,You are looking for a condo,*,0.0511446027085,BAD
+118,alla vamos,9,You are looking for a condo,,0.0511446027085,BAD
+113,what about a condo ,9,You are looking for a condo,,0.0511446027085,BAD
+64,tengo 5000 mil,9,You are looking for a condo,,0.0511446027085,BAD
+65,necesito una cn minimo 4 cuartos,9,You are looking for a condo,,0.0511446027085,BAD
+66,how should the general characteristics of the dwelling be ,9,You are looking for a condo,,0.0511446027085,BAD
+70,which condo options does it offer ,9,You are looking for a condo,,0.0511446027085,BAD
+106,i m not sure if it will be good,9,You are looking for a condo,,0.0511446027085,BAD
+71,i would really like a condo,9,You are looking for a condo,,0.0511446027085,BAD
+105,i need your help,9,You are looking for a condo,,0.0511446027085,BAD
+104,i ve got a budget there s something on my range budget ,9,You are looking for a condo,,0.0511446027085,BAD
+77,will purchase an apartment,9,You are looking for a condo,,0.0511446027085,BAD
+78,what does the insurance cover ,9,You are looking for a condo,,0.0511446027085,BAD
+80,will i need to move in the next five years ,9,You are looking for a condo,,0.0511446027085,BAD
+82,i like populated places if theres lot of building around i dont mind,9,You are looking for a condo,,0.0511446027085,BAD
+83,and if is possible i would like a place to listen loud music,9,You are looking for a condo,,0.0511446027085,BAD
+102,how are the options if im seeking a condo ,9,You are looking for a condo,,0.0511446027085,BAD
+84,how much is the monthly associates fees ,9,You are looking for a condo,,0.0511446027085,BAD
+85,is there available space for storage ,9,You are looking for a condo,,0.0511446027085,BAD
+100,how much would a condo cost per month ,9,You are looking for a condo,,0.0511446027085,BAD
+87,what quality of life does the condominium offer ,9,You are looking for a condo,,0.0511446027085,BAD
+92,what a condo site ,9,You are looking for a condo,,0.0511446027085,BAD
+99,i would like to see your condo options ,9,You are looking for a condo,,0.0511446027085,BAD
+94,i would like to locate a condominium according to my needs and budget,9,You are looking for a condo,,0.0511446027085,BAD
+95,the condo must be within my budget,9,You are looking for a condo,,0.0511446027085,BAD
+97,how much i need for a comfortable condo ,9,You are looking for a condo,,0.0511446027085,BAD
+96,where i can find a good home ,9,You are looking for a condo,,0.0511446027085,BAD
+0,can you find a condominium ,9,You are looking for a condo,-,0.0511446027085,BAD
+119,interntar,9,You are looking for a condo,,0.0511446027085,BAD
+26,can you give me a list of available condo units ,9,You are looking for a condo,,0.0511446027085,BAD
+49,what condos are available ,9,You are looking for a condo,,0.0511446027085,BAD
+25,is there any available condo unit in this area ,9,You are looking for a condo,,0.0511446027085,BAD
+23,do we have to pay full for it ,9,You are looking for a condo,,0.0511446027085,BAD
+35,is there any options ,9,You are looking for a condo,,0.0511446027085,BAD
+37,do you have any available ones near a supermarket ,9,You are looking for a condo,,0.0511446027085,BAD
+22,how much is your condo ,9,You are looking for a condo,,0.0511446027085,BAD
+19,what price range would a condo be in ,9,You are looking for a condo,,0.0511446027085,BAD
+16,i would prefer a condo ,9,You are looking for a condo,,0.0511446027085,BAD
+32,is there other options to choose ,9,You are looking for a condo,,0.0511446027085,BAD
+14,can you recommend a good area,9,You are looking for a condo,,0.0511446027085,BAD
+41,where would i find an affordable condo ,9,You are looking for a condo,,0.0511446027085,BAD
+40,is there a condo available for purchase ,9,You are looking for a condo,,0.0511446027085,BAD
+7,what options are there for condos ,9,You are looking for a condo,,0.0511446027085,BAD
+6,i am interested in a family friendly condo ,9,You are looking for a condo,,0.0511446027085,BAD
+5,i want to purchase a condo ,9,You are looking for a condo,,0.0511446027085,BAD
+47,is condo include in your listing ,9,You are looking for a condo,,0.0511446027085,BAD
+48,i want to see condos ,9,You are looking for a condo,,0.0511446027085,BAD
+114,do you have condo ,10,You are looking for a condo,,0.624587416649,
+45,do you have an available condo ,10,You are looking for a condo,*,0.624587416649,
+20,do you have many condos on your books at present ii m,10,You are looking for a condo,,0.624587416649,
+86,what are the rules ,11,You are looking for a condo,*,1.0,
+79,what are the rules ,11,You are looking for a condo,,1.0,
+42,i am looking for a condo,12,You are looking for a condo,*,1.0,
+4,i am looking for a condo ,12,You are looking for a condo,,1.0,
+30,i am looking for a condo,12,You are looking for a condo,,1.0,
+12,what are some condo locations,13,You are looking for a condo,*,0.846757113934,
+13,what are some mid priced condos,13,You are looking for a condo,,0.846757113934,
+21,do you have a condo near a mall ,14,You are looking for a condo,,0.791748702526,
+81,so do you have a condo i am looking for that,14,You are looking for a condo,*,0.791748702526,
+31,how much ,15,You are looking for a condo,,1.0,
+34,how much ,15,You are looking for a condo,*,1.0,
+88,what is the price of the condo ,16,You are looking for a condo,*,,
+39,are there any condos available ,17,You are looking for a condo,,0.83231139183,
+116,is there any condo ,17,You are looking for a condo,,0.83231139183,
+61,are there any condos available ,17,You are looking for a condo,*,0.83231139183,
+46,i need to move to a condo ,18,You are looking for a condo,,0.851163188616,
+101,i really need to move to a condo right now ,18,You are looking for a condo,,0.851163188616,
+112,i really need to move to a condo,18,You are looking for a condo,*,0.851163188616,
+76,i want to buy an affordable apartment,19,You are looking for a condo,,0.745243906975,
+75,i wish to buy an apartment,19,You are looking for a condo,*,0.745243906975,
+103,its in a nice place ,20,You are looking for a condo,*,,
+111,i am looking fora condo,21,You are looking for a condo,*,0.611850872636,
+33,i am looking an affordablle condo,21,You are looking for a condo,,0.611850872636,
+8,i am looking at condo options ,21,You are looking for a condo,,0.611850872636,
+98,i am looking for an apartment,21,You are looking for a condo,,0.611850872636,
+38,how much will the rent cost ,22,You are looking for a condo,*,,
+115,what tupe of condo you have ,23,You are looking for a condo,,0.625415033764,
+68,in which condo you want to live ,23,You are looking for a condo,,0.625415033764,
+67,in what type of condo you want to live ,23,You are looking for a condo,*,0.625415033764,
+29,is the condo fully furnished ,24,You are looking for a condo,,0.543465971947,
+89,how often is the condo paid ,24,You are looking for a condo,,0.543465971947,
+91,where the condo ,24,You are looking for a condo,,0.543465971947,
+28,how big is the condo ,24,You are looking for a condo,*,0.543465971947,
+63,de cuanto estamos hablando ,25,You are looking for a condo,*,,
+10,we re looking for a condo ,26,You are looking for a condo,,0.588283119202,
+1,i would like to look for a condo,26,You are looking for a condo,,0.588283119202,
+90,i looking for a condo ,26,You are looking for a condo,*,0.588283119202,
+110,i m in search for a condo ,26,You are looking for a condo,,0.588283119202,
+44,i m chearching for a condo,26,You are looking for a condo,,0.588283119202,
+73,i m interested in a condominium,27,You are looking for a condo,*,0.999999970198,
+69,i m interested in a condominium,27,You are looking for a condo,,0.999999970198,
+3,can you show me condos ,28,You are looking for a condo,*,0.770628399319,
+50,can you show mecondos ,28,You are looking for a condo,,0.770628399319,
+11,can you show me some condos ,28,You are looking for a condo,,0.770628399319,
+58,how affordable is a condo ,29,You are looking for a condo,*,0.762172579765,
+59,how much is a condo ,29,You are looking for a condo,,0.762172579765,
+56,what ype of home are you looking for ,30,You are looking for a condo,,0.826792226897,
+55,are you looking for a condo ,30,You are looking for a condo,,0.826792226897,
+54,what kinda home are you looking for ,30,You are looking for a condo,*,0.826792226897,
