@@ -13,6 +13,10 @@ df = pd.read_csv(
     'gdp-life-exp-2007.csv')
 
 
+for i in df.continent.unique():
+    x=df[df['continent'] == i]['gdp per capita']    
+    y=df[df['continent'] == i]['life expectancy']
+    
 app.layout = html.Div([
     dcc.Graph(
         id='life-exp-vs-gdp',

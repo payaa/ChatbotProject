@@ -18,7 +18,7 @@ import jellyfish
 from sklearn.preprocessing import scale,normalize,LabelEncoder
 from sklearn import metrics
 import itertools
-from langdetect import detect 
+#from langdetect import detect 
 
 
 dataset_type = 'collected_data'
@@ -63,9 +63,9 @@ real_estate_user_df=  pd.read_csv('./'+dataset_type+'/'+ FILENAME)
 utterance_dict = defaultdict(list)
 for index, row in real_estate_user_df.iterrows():
     scenario = row['scenario'].lower().strip()
-    response1 = re.sub('[\W_]+', ' ', row['response_1'].lower().strip().decode("utf-8"), flags=re.UNICODE) 
-    response2 = re.sub('[\W_]+', ' ', row['response_2'].lower().strip().decode("utf-8"), flags=re.UNICODE) 
-    response3 = re.sub('[\W_]+', ' ', row['response_3'].lower().strip().decode("utf-8"), flags=re.UNICODE) 
+    response1 = re.sub('[\W_]+', ' ', row['response_1'].lower().strip(), flags=re.UNICODE) 
+    response2 = re.sub('[\W_]+', ' ', row['response_2'].lower().strip(), flags=re.UNICODE) 
+    response3 = re.sub('[\W_]+', ' ', row['response_3'].lower().strip(), flags=re.UNICODE) 
     utterance_dict[scenario].append(response1)
     utterance_dict[scenario].append(response2)
     utterance_dict[scenario].append(response3)

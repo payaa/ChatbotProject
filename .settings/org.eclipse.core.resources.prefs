@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
 encoding//src/UtteranceVectorizer.py=utf-8
 encoding//src/cluster_utterances.py=utf-8
+encoding//src/config.py=utf-8

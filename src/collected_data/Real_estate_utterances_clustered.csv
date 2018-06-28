@@ -1,121 +1,121 @@
 ,SPEECH,CLUSTER_ID,SCENARIO,TYPICAL_VECTOR,INTRACLUSTER_DISTANCE,IS_BAD_CLUSTER
-2,i am looking to move into a condo,1,You are looking for a condo,*,0.824000328779,
-60,i d like to move into a condo,1,You are looking for a condo,,0.824000328779,
-108,i need to buy a condo ,2,You are looking for a condo,,0.830795526505,
-9,i want to buy a condo ,2,You are looking for a condo,*,0.830795526505,
-62,i m looking for condos,3,You are looking for a condo,,0.827538579702,
-36,i m looking for a condo ,3,You are looking for a condo,*,0.827538579702,
-72,i m looking for a condo,3,You are looking for a condo,,0.827538579702,
-93,i m looking for a condo that fits my budget,3,You are looking for a condo,,0.827538579702,
-18,is there a good selection of condos in this area ,4,You are looking for a condo,*,,
-53,where are the available condos located ,5,You are looking for a condo,,0.711147725582,
-52,what are the prices of the available condos ,5,You are looking for a condo,*,0.711147725582,
-51,do you have any condos available ,6,You are looking for a condo,,0.778530664742,
-74,do you know of any condo available ,6,You are looking for a condo,,0.778530664742,
-27,do you have any condo available ,6,You are looking for a condo,*,0.778530664742,
-17,do you have any condos ,6,You are looking for a condo,,0.778530664742,
-43,i really want to move to a condo,7,You are looking for a condo,,0.744888991117,
-24,i want to move to a condo can you find me one ,7,You are looking for a condo,*,0.744888991117,
-15,can you help me find a condo ,8,You are looking for a condo,,0.841907845603,
-109,can you help me find a condo ,8,You are looking for a condo,*,0.841907845603,
-107,can you help me ,8,You are looking for a condo,,0.841907845603,
-117,cominosago,9,You are looking for a condo,,0.0511446027085,BAD
-57,where can i find a condo ,9,You are looking for a condo,*,0.0511446027085,BAD
-118,alla vamos,9,You are looking for a condo,,0.0511446027085,BAD
-113,what about a condo ,9,You are looking for a condo,,0.0511446027085,BAD
-64,tengo 5000 mil,9,You are looking for a condo,,0.0511446027085,BAD
-65,necesito una cn minimo 4 cuartos,9,You are looking for a condo,,0.0511446027085,BAD
-66,how should the general characteristics of the dwelling be ,9,You are looking for a condo,,0.0511446027085,BAD
-70,which condo options does it offer ,9,You are looking for a condo,,0.0511446027085,BAD
-106,i m not sure if it will be good,9,You are looking for a condo,,0.0511446027085,BAD
-71,i would really like a condo,9,You are looking for a condo,,0.0511446027085,BAD
-105,i need your help,9,You are looking for a condo,,0.0511446027085,BAD
-104,i ve got a budget there s something on my range budget ,9,You are looking for a condo,,0.0511446027085,BAD
-77,will purchase an apartment,9,You are looking for a condo,,0.0511446027085,BAD
-78,what does the insurance cover ,9,You are looking for a condo,,0.0511446027085,BAD
-80,will i need to move in the next five years ,9,You are looking for a condo,,0.0511446027085,BAD
-82,i like populated places if theres lot of building around i dont mind,9,You are looking for a condo,,0.0511446027085,BAD
-83,and if is possible i would like a place to listen loud music,9,You are looking for a condo,,0.0511446027085,BAD
-102,how are the options if im seeking a condo ,9,You are looking for a condo,,0.0511446027085,BAD
-84,how much is the monthly associates fees ,9,You are looking for a condo,,0.0511446027085,BAD
-85,is there available space for storage ,9,You are looking for a condo,,0.0511446027085,BAD
-100,how much would a condo cost per month ,9,You are looking for a condo,,0.0511446027085,BAD
-87,what quality of life does the condominium offer ,9,You are looking for a condo,,0.0511446027085,BAD
-92,what a condo site ,9,You are looking for a condo,,0.0511446027085,BAD
-99,i would like to see your condo options ,9,You are looking for a condo,,0.0511446027085,BAD
-94,i would like to locate a condominium according to my needs and budget,9,You are looking for a condo,,0.0511446027085,BAD
-95,the condo must be within my budget,9,You are looking for a condo,,0.0511446027085,BAD
-97,how much i need for a comfortable condo ,9,You are looking for a condo,,0.0511446027085,BAD
-96,where i can find a good home ,9,You are looking for a condo,,0.0511446027085,BAD
-0,can you find a condominium ,9,You are looking for a condo,-,0.0511446027085,BAD
-119,interntar,9,You are looking for a condo,,0.0511446027085,BAD
-26,can you give me a list of available condo units ,9,You are looking for a condo,,0.0511446027085,BAD
-49,what condos are available ,9,You are looking for a condo,,0.0511446027085,BAD
-25,is there any available condo unit in this area ,9,You are looking for a condo,,0.0511446027085,BAD
-23,do we have to pay full for it ,9,You are looking for a condo,,0.0511446027085,BAD
-35,is there any options ,9,You are looking for a condo,,0.0511446027085,BAD
-37,do you have any available ones near a supermarket ,9,You are looking for a condo,,0.0511446027085,BAD
-22,how much is your condo ,9,You are looking for a condo,,0.0511446027085,BAD
-19,what price range would a condo be in ,9,You are looking for a condo,,0.0511446027085,BAD
-16,i would prefer a condo ,9,You are looking for a condo,,0.0511446027085,BAD
-32,is there other options to choose ,9,You are looking for a condo,,0.0511446027085,BAD
-14,can you recommend a good area,9,You are looking for a condo,,0.0511446027085,BAD
-41,where would i find an affordable condo ,9,You are looking for a condo,,0.0511446027085,BAD
-40,is there a condo available for purchase ,9,You are looking for a condo,,0.0511446027085,BAD
-7,what options are there for condos ,9,You are looking for a condo,,0.0511446027085,BAD
-6,i am interested in a family friendly condo ,9,You are looking for a condo,,0.0511446027085,BAD
-5,i want to purchase a condo ,9,You are looking for a condo,,0.0511446027085,BAD
-47,is condo include in your listing ,9,You are looking for a condo,,0.0511446027085,BAD
-48,i want to see condos ,9,You are looking for a condo,,0.0511446027085,BAD
-114,do you have condo ,10,You are looking for a condo,,0.624587416649,
-45,do you have an available condo ,10,You are looking for a condo,*,0.624587416649,
-20,do you have many condos on your books at present ii m,10,You are looking for a condo,,0.624587416649,
-86,what are the rules ,11,You are looking for a condo,*,1.0,
-79,what are the rules ,11,You are looking for a condo,,1.0,
-42,i am looking for a condo,12,You are looking for a condo,*,1.0,
-4,i am looking for a condo ,12,You are looking for a condo,,1.0,
-30,i am looking for a condo,12,You are looking for a condo,,1.0,
-12,what are some condo locations,13,You are looking for a condo,*,0.846757113934,
-13,what are some mid priced condos,13,You are looking for a condo,,0.846757113934,
-21,do you have a condo near a mall ,14,You are looking for a condo,,0.791748702526,
-81,so do you have a condo i am looking for that,14,You are looking for a condo,*,0.791748702526,
-31,how much ,15,You are looking for a condo,,1.0,
-34,how much ,15,You are looking for a condo,*,1.0,
-88,what is the price of the condo ,16,You are looking for a condo,*,,
-39,are there any condos available ,17,You are looking for a condo,,0.83231139183,
-116,is there any condo ,17,You are looking for a condo,,0.83231139183,
-61,are there any condos available ,17,You are looking for a condo,*,0.83231139183,
-46,i need to move to a condo ,18,You are looking for a condo,,0.851163188616,
-101,i really need to move to a condo right now ,18,You are looking for a condo,,0.851163188616,
-112,i really need to move to a condo,18,You are looking for a condo,*,0.851163188616,
-76,i want to buy an affordable apartment,19,You are looking for a condo,,0.745243906975,
-75,i wish to buy an apartment,19,You are looking for a condo,*,0.745243906975,
-103,its in a nice place ,20,You are looking for a condo,*,,
-111,i am looking fora condo,21,You are looking for a condo,*,0.611850872636,
-33,i am looking an affordablle condo,21,You are looking for a condo,,0.611850872636,
-8,i am looking at condo options ,21,You are looking for a condo,,0.611850872636,
-98,i am looking for an apartment,21,You are looking for a condo,,0.611850872636,
-38,how much will the rent cost ,22,You are looking for a condo,*,,
-115,what tupe of condo you have ,23,You are looking for a condo,,0.625415033764,
-68,in which condo you want to live ,23,You are looking for a condo,,0.625415033764,
-67,in what type of condo you want to live ,23,You are looking for a condo,*,0.625415033764,
-29,is the condo fully furnished ,24,You are looking for a condo,,0.543465971947,
-89,how often is the condo paid ,24,You are looking for a condo,,0.543465971947,
-91,where the condo ,24,You are looking for a condo,,0.543465971947,
-28,how big is the condo ,24,You are looking for a condo,*,0.543465971947,
-63,de cuanto estamos hablando ,25,You are looking for a condo,*,,
-10,we re looking for a condo ,26,You are looking for a condo,,0.588283119202,
-1,i would like to look for a condo,26,You are looking for a condo,,0.588283119202,
-90,i looking for a condo ,26,You are looking for a condo,*,0.588283119202,
-110,i m in search for a condo ,26,You are looking for a condo,,0.588283119202,
-44,i m chearching for a condo,26,You are looking for a condo,,0.588283119202,
-73,i m interested in a condominium,27,You are looking for a condo,*,0.999999970198,
-69,i m interested in a condominium,27,You are looking for a condo,,0.999999970198,
-3,can you show me condos ,28,You are looking for a condo,*,0.770628399319,
-50,can you show mecondos ,28,You are looking for a condo,,0.770628399319,
-11,can you show me some condos ,28,You are looking for a condo,,0.770628399319,
-58,how affordable is a condo ,29,You are looking for a condo,*,0.762172579765,
-59,how much is a condo ,29,You are looking for a condo,,0.762172579765,
-56,what ype of home are you looking for ,30,You are looking for a condo,,0.826792226897,
-55,are you looking for a condo ,30,You are looking for a condo,,0.826792226897,
-54,what kinda home are you looking for ,30,You are looking for a condo,*,0.826792226897,
+73,i am interested in buying a house whose price is affordable,1,You are looking to buy an affordable home,*,0.702962309122,
+99,i am interested in an affordable home ,1,You are looking to buy an affordable home,,0.702962309122,
+51,do you have any homes for sale that arent very expensive ,2,You are looking to buy an affordable home,*,0.618360459805,
+94,the property should not be very expensive,2,You are looking to buy an affordable home,,0.618360459805,
+55,how can i know what i can afford ,3,You are looking to buy an affordable home,,0.355976028575,
+74,i want to buy a house at a good price,3,You are looking to buy an affordable home,,0.355976028575,
+5,i only want to see homes that i can afford ,3,You are looking to buy an affordable home,,0.355976028575,
+56,can i know what i can afford ,3,You are looking to buy an affordable home,*,0.355976028575,
+97,i really need to move to a place i can afford its pay,3,You are looking to buy an affordable home,,0.355976028575,
+81,i want a house that i can afford but in a good place,3,You are looking to buy an affordable home,,0.355976028575,
+16,i m looking for affordability not luxury ,4,You are looking to buy an affordable home,*,0.530050370428,
+20,what options do i have for affordable properties ,4,You are looking to buy an affordable home,,0.530050370428,
+78,i m looking for an accessible apartment,4,You are looking to buy an affordable home,,0.530050370428,
+33,i am looking an affordable house,5,You are looking to buy an affordable home,,0.543673359685,
+77,buy an affordable house,5,You are looking to buy an affordable home,,0.543673359685,
+76,i would like to buy an affordable house,5,You are looking to buy an affordable home,,0.543673359685,
+75,i want to buy an affordable house,5,You are looking to buy an affordable home,*,0.543673359685,
+24,can you find me an affordable house in this neighborhood ,5,You are looking to buy an affordable home,,0.543673359685,
+79,where can i get an affordable house ,5,You are looking to buy an affordable home,,0.543673359685,
+44,i can t spent much it needs to be an affordable home,6,You are looking to buy an affordable home,,0.494562949453,
+100,what would you recommend as an affordable home ,6,You are looking to buy an affordable home,,0.494562949453,
+59,how much is an affordable home ,6,You are looking to buy an affordable home,*,0.494562949453,
+113,i really need to move to an affordable home,6,You are looking to buy an affordable home,,0.494562949453,
+111,what about an affordable home,6,You are looking to buy an affordable home,,0.494562949453,
+12,i need an affordable home,6,You are looking to buy an affordable home,,0.494562949453,
+112,how much does an affordable home coast ,6,You are looking to buy an affordable home,,0.494562949453,
+41,is this home affordable for me ,7,You are looking to buy an affordable home,*,0.742008477449,
+39,is this home within my budget ,7,You are looking to buy an affordable home,,0.742008477449,
+2,i would like to buy an affordable home,8,You are looking to buy an affordable home,,0.668858688325,
+42,i m looking to buy an affordable home,8,You are looking to buy an affordable home,,0.668858688325,
+108,i d like to buy an affordable home ,8,You are looking to buy an affordable home,,0.668858688325,
+110,i want to buy an affordable home can you help ,8,You are looking to buy an affordable home,,0.668858688325,
+9,i m looking to buy an affordable home ,8,You are looking to buy an affordable home,,0.668858688325,
+92,where i looking to buy an affordable home ,8,You are looking to buy an affordable home,,0.668858688325,
+90,i am looking to buy an affordable home ,8,You are looking to buy an affordable home,,0.668858688325,
+36,i m looking to buy an affordable home ,8,You are looking to buy an affordable home,*,0.668858688325,
+115,affordable home is all i need ,9,You are looking to buy an affordable home,,0.340349717273,
+114,i need affordable home ,9,You are looking to buy an affordable home,*,0.340349717273,
+98,help me to found affordable home,9,You are looking to buy an affordable home,,0.340349717273,
+91,are here affordable home ,9,You are looking to buy an affordable home,,0.340349717273,
+93,i need a modest property,9,You are looking to buy an affordable home,,0.340349717273,
+25,i need to find a house without over extending my budget,9,You are looking to buy an affordable home,,0.340349717273,
+96,i am looking for an apartment under 500k,10,You are looking to buy an affordable home,,0.300076978547,
+104,can i request for a option if i can increase or decrease my initial budget ,10,You are looking to buy an affordable home,,0.300076978547,
+6,i am looking for a home that i can reasonably afford ,10,You are looking to buy an affordable home,,0.300076978547,
+3,i am looking for a reasonably priced home ,10,You are looking to buy an affordable home,*,0.300076978547,
+18,i am looking for a property at the lower end of the price market ,10,You are looking to buy an affordable home,,0.300076978547,
+72,i am looking for a house with a not so high cost,10,You are looking to buy an affordable home,,0.300076978547,
+21,what s your cheapest price for a home ,10,You are looking to buy an affordable home,,0.300076978547,
+8,are there any homes that are moderately affordable ,11,You are looking to buy an affordable home,*,0.403156456947,
+7,what homes are available that are in a moderate price range ,11,You are looking to buy an affordable home,,0.403156456947,
+62,are there any cheap or affordable homes ,11,You are looking to buy an affordable home,,0.403156456947,
+19,are there any properties that are in an affordable price range ,11,You are looking to buy an affordable home,,0.403156456947,
+101,have you got any family homes that are affordable ,11,You are looking to buy an affordable home,,0.403156456947,
+118,es cara,12,You are looking to buy an affordable home,*,1.0,
+119,es bonita,12,You are looking to buy an affordable home,,1.0,
+35,is there any options ,13,You are looking to buy an affordable home,,0.589467538728,
+31,is there any available ,13,You are looking to buy an affordable home,*,0.589467538728,
+116,is there any affordable home ,13,You are looking to buy an affordable home,,0.589467538728,
+68,what is the maximum you can buy ,14,You are looking to buy an affordable home,,0.127371405378,
+67,what area would you like to live ,14,You are looking to buy an affordable home,*,0.127371405378,
+82,a small place is ok i will live alone there,14,You are looking to buy an affordable home,,0.127371405378,
+65,tenemos varias disponibles,14,You are looking to buy an affordable home,,0.127371405378,
+64,de cuanto estamos hablando ,14,You are looking to buy an affordable home,,0.127371405378,
+83,does the place have a back yard i would like a back yard,14,You are looking to buy an affordable home,,0.127371405378,
+85,will i be able to save some extra cash ,14,You are looking to buy an affordable home,,0.127371405378,
+29,how many bedrooms are available ,14,You are looking to buy an affordable home,,0.127371405378,
+63,asequible de cuanto ,14,You are looking to buy an affordable home,,0.127371405378,
+40,can i find a home within a certain price range ,15,You are looking to buy an affordable home,,0.31539512674,
+84,will it be within my budget ,15,You are looking to buy an affordable home,,0.31539512674,
+37,do you have anything in the range of 500k ,15,You are looking to buy an affordable home,,0.31539512674,
+26,can you furnish me a list of houses in the low price range ,15,You are looking to buy an affordable home,,0.31539512674,
+15,do you have anything affordable within my price range ,15,You are looking to buy an affordable home,,0.31539512674,
+13,do you have anything affordable,15,You are looking to buy an affordable home,*,0.31539512674,
+10,can you show me details for reasonably priced properties ,16,You are looking to buy an affordable home,,0.73020752271,
+71,can you show me affordable homes ,16,You are looking to buy an affordable home,*,0.73020752271,
+4,can you show me more affordable homes ,16,You are looking to buy an affordable home,,0.73020752271,
+22,how much do we have to pay for it ,17,You are looking to buy an affordable home,*,0.833078145981,
+23,do we have to pay fully for it to afford ,17,You are looking to buy an affordable home,,0.833078145981,
+66,how much does it count ,18,You are looking to buy an affordable home,*,0.513828992844,
+80,how much does the house cost ,18,You are looking to buy an affordable home,,0.513828992844,
+34,how much ,18,You are looking to buy an affordable home,,0.513828992844,
+57,where can i find an affordable home ,19,You are looking to buy an affordable home,*,0.642744913697,
+58,in what neighborhoods can i find an affordable home ,19,You are looking to buy an affordable home,,0.642744913697,
+1,i need to find an affordable home,19,You are looking to buy an affordable home,,0.642744913697,
+109,could you help me find an affordable home ,19,You are looking to buy an affordable home,,0.642744913697,
+69,any affordable option ,20,You are looking to buy an affordable home,*,0.308974146843,
+70,i would like an affordable option to my budget,20,You are looking to buy an affordable home,,0.308974146843,
+32,is there other options to choose ,20,You are looking to buy an affordable home,,0.308974146843,
+50,what are the most affordable options ,20,You are looking to buy an affordable home,,0.308974146843,
+53,where are the homes located ,20,You are looking to buy an affordable home,,0.308974146843,
+87,can i get a house with the features i want at an affordable price ,21,You are looking to buy an affordable home,,1.0,
+88,can i get a house with the features i want at an affordable price ,21,You are looking to buy an affordable home,*,1.0,
+45,i am not searching for an expensive home ,22,You are looking to buy an affordable home,,0.648732754919,
+43,i m searching for an affordable home,22,You are looking to buy an affordable home,*,0.648732754919,
+30,i am looking for an affordable home,22,You are looking to buy an affordable home,,0.648732754919,
+86,can i afford the maintenance ,23,You are looking to buy an affordable home,*,0.731441795826,
+54,what kind of home can i afford ,23,You are looking to buy an affordable home,,0.731441795826,
+95,my budget is not very high,24,You are looking to buy an affordable home,,0.37459616363,
+28,what size would i get for that price ,24,You are looking to buy an affordable home,*,0.37459616363,
+60,show me what is available that is between my budget,24,You are looking to buy an affordable home,,0.37459616363,
+61,my budget is limited what can you show me for that price ,24,You are looking to buy an affordable home,,0.37459616363,
+48,i want something affordable ,25,You are looking to buy an affordable home,*,0.428616337478,
+49,what do you have that s affordable ,25,You are looking to buy an affordable home,,0.428616337478,
+17,can you help me find something that s affordable ,25,You are looking to buy an affordable home,,0.428616337478,
+11,i want to buy something that isn t too expensive ,25,You are looking to buy an affordable home,,0.428616337478,
+38,is it better than renting a home ,26,You are looking to buy an affordable home,,0.608963698149,
+106,is it comfortable ,26,You are looking to buy an affordable home,*,0.608963698149,
+14,being affordable is a concern,27,You are looking to buy an affordable home,,0.211516514421,
+0,i am looking to purchase a house that is affordable,27,You are looking to buy an affordable home,-,0.211516514421,-
+46,i want to purchase a house that is not pricey ,27,You are looking to buy an affordable home,,0.211516514421,
+107,do you need fixes ,27,You are looking to buy an affordable home,,0.211516514421,
+89,how many rooms do you own ,27,You are looking to buy an affordable home,,0.211516514421,
+102,im on a budget do you have someting for me ,27,You are looking to buy an affordable home,,0.211516514421,
+27,do you have a budget friendly house ,27,You are looking to buy an affordable home,,0.211516514421,
+47,do you have a hime that is affordable ,27,You are looking to buy an affordable home,*,0.211516514421,
+117,mas o menos,28,You are looking to buy an affordable home,*,,
+52,what are the prices of the available homes ,29,You are looking to buy an affordable home,,0.562407046556,
+105,what would be the price ,29,You are looking to buy an affordable home,*,0.562407046556,
+103,how about your finantiation policy ,30,You are looking to buy an affordable home,*,,

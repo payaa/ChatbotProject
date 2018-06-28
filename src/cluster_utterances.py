@@ -18,7 +18,8 @@ import itertools
 from sklearn.decomposition import PCA
 from UtteranceVectorizer import *
 import config 
-
+import pickle
+from sklearn.manifold import TSNE
 
 
 def generate_utterance_dict():
@@ -208,6 +209,9 @@ def main():
     bad_clusters = determine_bad_clusters(intracluster_distances,threshold_value = 0.1)   
     save_result(utterances,current_scenario,cluster_series,typical_utterances,bad_clusters,intracluster_distances)
 
-
+   #reduced_data = PCA(n_components=2).fit_transform(user_lsi_vector)
+    reduced_data = TSNE(n_components=2).fit_transform(user_tfidf_vector)
+    pickle.dump( reduced_data, open( "document_vector.p", "wb" ) )
+    
 if __name__ == '__main__':
     main()
